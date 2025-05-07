@@ -35,5 +35,5 @@ jobs:
           git config --global user.name "javboxes"
           git config --global user.email "emma_wl@hotmail.com"
           git add index.html
-          git commit -m "更新 index.html from Colab"
-          git push
+          git commit --allow-empty -m "Update index.html from GitHub Actions"
+          git push origin main
