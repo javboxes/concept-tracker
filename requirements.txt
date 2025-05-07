@@ -1,3 +1,4 @@
-nest_asyncio
 playwright
-IPython
+nest_asyncio
+beautifulsoup4
+ipython
