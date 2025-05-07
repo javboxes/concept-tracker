@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: '3.10'  # 使用适合的 Python 版本
 
+      - name: 安装 Playwright 浏览器驱动
+        run: |
+          python -m playwright install
+
       - name: 安装 Python 依赖
         run: |
           pip install -r requirements.txt || true  # 如果有 requirements.txt 文件，安装依赖
