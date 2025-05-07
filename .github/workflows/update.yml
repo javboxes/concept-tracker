@@ -36,4 +36,4 @@ jobs:
           git config --global user.email "emma_wl@hotmail.com"
           git add index.html
           git commit --allow-empty -m "Update index.html from GitHub Actions"
-          git push origin main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
