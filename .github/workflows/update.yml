@@ -28,7 +28,7 @@ jobs:
           python -m playwright install chromium --with-deps  # 安装 Chromium 浏览器驱动
 
       - name: 运行 Python 脚本生成 HTML
-        run: python Colab_rank_gn.py  # 运行你的 Python 脚本
+        run: python colab_rank_gn.py  # 运行你的 Python 脚本
 
       - name: 提交并推送 index.html 到 GitHub Pages
         run: |
