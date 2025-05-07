@@ -9,10 +9,11 @@ Original file is located at
 
 import nest_asyncio
 import asyncio
-nest_asyncio.apply()
 from playwright.async_api import async_playwright
 from urllib.parse import quote
 from IPython.display import display, HTML
+
+nest_asyncio.apply()
 
 async def main():
     async with async_playwright() as p:
@@ -76,5 +77,6 @@ async def main():
         # Step 9: Close the browser
         await browser.close()
 
-# Step 10: Run the asyncio event loop to execute the function
-await main()
+# 调用 async 函数时，确保在 asyncio.run() 中运行
+if __name__ == "__main__":
+    asyncio.run(main())  # 使用 asyncio.run() 来执行 async main() 函数
