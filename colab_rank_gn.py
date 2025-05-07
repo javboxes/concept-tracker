@@ -7,13 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1CaJhaZy-dQSmBMysTalC27-yxBzxOJmB
 """
 
-!pip install -q playwright
-!playwright install chromium --with-deps
-
-!git add index.html
-!git commit -m "更新 index.html from Colab"
-!git push origin main
-
 import nest_asyncio
 import asyncio
 nest_asyncio.apply()
