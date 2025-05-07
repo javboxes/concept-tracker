@@ -63,9 +63,9 @@ async def main():
                 top_concepts.append((name, zdf, link))
 
         # 构建 HTML 内容
-        html_body = "<html><head><meta charset='utf-8'><title>概念涨跌幅前十</title></head><body>"
+        html_body = "<html><head><meta charset='utf-8'><title>概念涨跌幅前十</title></head><body></br></br>"
         for idx, (name, zdf, link) in enumerate(top_concepts, 1):
-            html_body += f'<li>{idx}. <a href="{link}">{name}</a> - {zdf}</li>'
+            html_body += f'<li style="font-size: 20px;">{idx}. <a href="{link}">{name}</a> - {zdf}</li>'
             html_body += "</ul></body></html>"
 
         display(HTML(html_body))
