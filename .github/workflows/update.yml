@@ -1,4 +1,4 @@
-name: 每小时运行 Colab_rank_gn.py 脚本并更新 HTML
+name: 每小时运行 colab_rank_gn.py 脚本并更新 HTML
 
 on:
   schedule:
