@@ -35,10 +35,10 @@ async def main():
 
         # Step 4: Navigate to the page with concept fund flow data
         url = "https://data.10jqka.com.cn/funds/gnzjl/"
-        await page.goto(url, wait_until="domcontentloaded")
+        await page.goto(url, wait_until="domcontentloaded", timeout=60000) # 60 秒
 
         # Step 5: Wait for the page to load completely
-        await page.wait_for_timeout(3000)
+        # await page.wait_for_timeout(3000)
 
         # Step 6: Extract the page content
         content = await page.content()
