@@ -35,5 +35,7 @@ jobs:
           git config --global user.name "javboxes"
           git config --global user.email "emma_wl@hotmail.com"
           git add index.html
-          git commit -m "Update index.html from GitHub Actions" || echo "No changes to commit"
-          git push
+          git commit -m "Update index.html from GitHub Actions" || echo "No changes"
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
