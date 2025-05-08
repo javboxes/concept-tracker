@@ -1,8 +1,8 @@
-name: 每小时运行 colab_rank_gn.py 脚本并更新 HTML
+name: 每半小时运行脚本并更新HTML
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次（UTC）
+    - cron: '*/30 1-8 * * 1-5'  # 每小时运行一次（UTC）
   workflow_dispatch:      # 可手动触发
 
 jobs:
