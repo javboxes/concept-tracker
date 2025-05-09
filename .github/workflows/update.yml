@@ -2,7 +2,7 @@ name: 每半小时运行脚本并更新HTML
 
 on:
   schedule:
-    - cron: '*/30 1-8 * * 1-5'  # 每小时运行一次（UTC）
+    - cron: '0,30 1-8 * * 1-5'  # 每小时运行一次（UTC）
   workflow_dispatch:      # 可手动触发
 
 jobs:
