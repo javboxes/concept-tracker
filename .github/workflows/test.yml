@@ -1,0 +1,17 @@
+name: ⏰ Cron Debug Test
+
+on:
+  schedule:
+  - cron: '0,15,30,45 1-8 * * 1-5' # UTC时间 1–8 点 = 北京时间 9–16 点，每15分钟一次
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  debug-cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print event type
+        run: |
+          echo "🪪 Triggered by event: ${{ github.event_name }}"
+          echo "⏰ Schedule (if any): ${{ github.event.schedule }}"
+          echo "📅 UTC Time Now: $(date -u)"
+          echo "🕙 Local Time: $(date)"
