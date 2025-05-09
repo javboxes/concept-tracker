@@ -2,7 +2,7 @@ name: 每半小时运行脚本并更新HTML
 
 on:
   schedule:
-    - cron: '0,15,30,45 * * * *'  # 每小时运行一次（UTC）
+    - cron: '0,15,30,45 1-8 * * 1-5' # UTC时间 1–8 点 = 北京时间 9–16 点，每15分钟一次
   workflow_dispatch:      # 可手动触发
 
 jobs:
@@ -29,9 +29,6 @@ jobs:
 
       - name: 运行 Python 脚本生成 HTML
         run: python colab_rank_gn.py  # 运行你的 Python 脚本
-
-      - name: Print event type
-        run: echo "Triggered by ${{ github.event_name }} at schedule ${{ github.event.schedule }}"
 
       - name: 提交并推送 index.html 到 GitHub Pages
         run: |
