@@ -30,6 +30,9 @@ jobs:
       - name: 运行 Python 脚本生成 HTML
         run: python colab_rank_gn.py  # 运行你的 Python 脚本
 
+      - name: Print event type
+        run: echo "Triggered by ${{ github.event_name }} at schedule ${{ github.event.schedule }}"
+
       - name: 提交并推送 index.html 到 GitHub Pages
         run: |
           git config --global user.name "javboxes"
